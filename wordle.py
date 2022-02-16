@@ -36,13 +36,11 @@ def badWords(correctlist,wordlist):
 
         if correctlist[i] == 1 and wordlist[i] not in ishwords:
                 ishwords.append(wordlist[i])
-        elif correctlist[i] == 0 and wordlist[i] not in ishwords and wordlist[i] not in badwords:
-                badwords.append(wordlist[i])
-
         elif correctlist[i] == 2:
             THEWORD.pop(i)
             THEWORD.insert(i,wordlist[i])
-
+        elif correctlist[i] == 0 and wordlist[i] not in ishwords and wordlist[i] not in badwords and wordlist[i] not in THEWORD:
+            badwords.append(wordlist[i])
 
 
 def check(curWord,correctarray):
