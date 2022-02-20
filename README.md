@@ -1,5 +1,6 @@
 # WordleSolver
 print("Hello Wordle")
+Start with the word "CRANE"
 
 Feel free to edit this piece of garbage as much as u want
 
