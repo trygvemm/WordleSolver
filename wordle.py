@@ -4,8 +4,6 @@ print("wordle Solver")
 print("type 0 for incorrect, 1 for wrong spot and 2 for correct")
 print("------------\nStart with CRANE")
 
-
-
 startWord = 'crane'
 curWord = startWord
 p = 0
@@ -15,6 +13,7 @@ THEWORD = [0,0,0,0,0]
 ishwords = []
 guesses = []
 bigwin = [2,2,2,2,2]
+placement = []
 
 def ask(curword):
     guesses.append(curWord)
