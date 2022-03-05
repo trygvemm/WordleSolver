@@ -6,7 +6,6 @@ print("------------\nStart with CRANE")
 
 startWord = 'crane'
 curWord = startWord
-p = 0
 
 badwords = []
 THEWORD = [0,0,0,0,0]
@@ -25,7 +24,7 @@ def ask(curword):
     if corArray != bigwin:
         check(curword,corArray)
     else:
-        print("Grattis")
+        print("Congratulations!")
 
 def badWords(correctlist,wordlist,curWord):
     for i in range(len(correctlist)):
@@ -63,11 +62,10 @@ def nextguess(badwords,THEWORD,ishwords,curWord):
     ask(curWord)
 
 def nextWord(badwords,THEWORD,ishwords,currentWord):
-    print("Bad letters:",badwords,"\nGood letters:",THEWORD,"\nIsh letters:",ishwords,"Guessed:",guesses)
+    print("Bad letters:",badwords,"\nGood letters:",THEWORD,"\nIsh letters:",ishwords)
     word2 = currentWord
     words = open('Common.txt','r')
     for i in words.readlines():
-        print("hie",i[:-1])
         charlist = list(i)
         charlist.pop()
         error = False
