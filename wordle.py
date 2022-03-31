@@ -1,9 +1,10 @@
-import numpy as np
+#WordleSolver by Trygve Myhr
 
 print("wordle Solver")
 print("type 0 for incorrect, 1 for wrong spot and 2 for correct")
 print("------------\nStart with CRANE")
 
+#Startword
 startWord = 'crane'
 curWord = startWord
 
@@ -49,7 +50,6 @@ def badWords(correctlist,wordlist,curWord):
             print("Skipped")
             guesses.append(curWord[:-1])
 
-
 def check(curWord,correctarray):
     wordlist = list(curWord)
     badWords(correctarray,wordlist,curWord)
@@ -90,7 +90,6 @@ def nextWord(badwords,THEWORD,ishwords,currentWord):
             curWord = i
             nextguess(badwords,THEWORD,ishwords,curWord)
             break
-
 
     if currentWord == word2:
         print("no more guesses")
